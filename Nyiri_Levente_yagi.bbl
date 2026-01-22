@@ -1,0 +1,123 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{balanis}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=300a12a82930b359f126eb819d7831ba}{%
+           family={Balanis},
+           familyi={B\bibinitperiod},
+           given={Constantine\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{300a12a82930b359f126eb819d7831ba}
+      \strng{fullhash}{300a12a82930b359f126eb819d7831ba}
+      \strng{fullhashraw}{300a12a82930b359f126eb819d7831ba}
+      \strng{bibnamehash}{300a12a82930b359f126eb819d7831ba}
+      \strng{authorbibnamehash}{300a12a82930b359f126eb819d7831ba}
+      \strng{authornamehash}{300a12a82930b359f126eb819d7831ba}
+      \strng{authorfullhash}{300a12a82930b359f126eb819d7831ba}
+      \strng{authorfullhashraw}{300a12a82930b359f126eb819d7831ba}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{978-0471667827}
+      \field{title}{Antenna Theory: Analysis and Design}
+      \field{year}{2005}
+    \endentry
+    \entry{yagi-video}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3064ee13e6b440daf3f9292be7660918}{%
+           family={{Telecom Training}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{3064ee13e6b440daf3f9292be7660918}
+      \strng{fullhash}{3064ee13e6b440daf3f9292be7660918}
+      \strng{fullhashraw}{3064ee13e6b440daf3f9292be7660918}
+      \strng{bibnamehash}{3064ee13e6b440daf3f9292be7660918}
+      \strng{authorbibnamehash}{3064ee13e6b440daf3f9292be7660918}
+      \strng{authornamehash}{3064ee13e6b440daf3f9292be7660918}
+      \strng{authorfullhash}{3064ee13e6b440daf3f9292be7660918}
+      \strng{authorfullhashraw}{3064ee13e6b440daf3f9292be7660918}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{YouTube videó}
+      \field{month}{10}
+      \field{note}{Közzétéve: 2024. október 23. Megtekintve: [Dátum]}
+      \field{title}{Yagi-Uda Antenna Design: Steps by step guide}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=PglR3pEFdDk
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=PglR3pEFdDk
+      \endverb
+    \endentry
+    \entry{cheng}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=1a6b658b4e0acf7a3a1693f945241072}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima K.},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=e811bc9ed8b16e0b2601c4f15bdf5a39}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{22c27fc897aa907d1165e8fee94d249a}
+      \strng{fullhash}{22c27fc897aa907d1165e8fee94d249a}
+      \strng{fullhashraw}{22c27fc897aa907d1165e8fee94d249a}
+      \strng{bibnamehash}{22c27fc897aa907d1165e8fee94d249a}
+      \strng{authorbibnamehash}{22c27fc897aa907d1165e8fee94d249a}
+      \strng{authornamehash}{22c27fc897aa907d1165e8fee94d249a}
+      \strng{authorfullhash}{22c27fc897aa907d1165e8fee94d249a}
+      \strng{authorfullhashraw}{22c27fc897aa907d1165e8fee94d249a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Antennas and Propagation}
+      \field{month}{9}
+      \field{number}{5}
+      \field{title}{Optimum Spacings for {Yagi}-{Uda} Arrays}
+      \field{volume}{21}
+      \field{year}{1973}
+      \field{pages}{615\bibrangedash 623}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/TAP.1973.1140561
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

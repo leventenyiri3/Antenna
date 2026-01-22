@@ -1,0 +1,28 @@
+CM 
+CE
+SY A=2.95	'Distance of last director to reflector
+SY B=2.51	'Length of reflectors
+SY C=1.95	'Spacing of reflectors in Z plane
+SY Segs=11
+SY DE=2.483	'Lenght of driven element
+SY DirLen=2.317	'Lenght of directors
+SY RD=0.7753	'Reflector->driven element distance
+SY DE_D1=0.7753
+SY D1_D2=0.5169
+SY D2_D3=0.4135
+SY D3_D4=0.3101
+SY Cable_radius=0.013
+GW	1	Segs	0	-(B/2)	-(C/2)	0	(B/2)	-(C/2)	Cable_radius
+GM	1	2	0	0	0	0	0	C/2	1
+GW	4	Segs	RD	-(DE/2)	0	RD	DE/2	0	Cable_radius
+GW	5	Segs	A	-(DirLen/2)	0	A	DirLen/2	0	Cable_radius
+GM	1	1	0	0	0	-D3_D4	0	0	5
+GM	1	1	0	0	0	-D2_D3	0	0	6
+GM	1	1	0	0	0	-D1_D2	0	0	7
+GE	0
+LD	5	0	0	0	58000000
+GN	-1
+EK
+EX	0	4	(Segs+1)/2	0	1	0	0
+FR	0	0	0	0	58	0
+EN

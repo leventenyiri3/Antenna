@@ -1,0 +1,194 @@
+\documentclass[12pt, a4paper]{article} % FIXED: Removed 'letterpaper'
+
+% --- MARGINS ---
+\usepackage[margin=2.5cm]{geometry} % This sets the borders
+
+% --- PACKAGES ---
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage[hungarian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{csquotes}
+
+% --- IMAGES PATH ---
+\graphicspath{{./Pictures/}{./Pictures/koax}{./Pictures/erosito}{./Pictures/Kisjelu-erositok}{./Pictures/Nagyjelu-erositok}{./Pictures/Keverok-es-oszcillatorok}{./Pictures/Forrasztos}}
+
+% --- BIBLIOGRAPHY ---
+\usepackage[style=ieee]{biblatex}
+\addbibresource{forrasok.bib}
+
+% --- CODE LISTINGS ---
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{placeins}
+
+% --- COLORS & SETTINGS ---
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Bash,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2
+}
+
+\title{Yagi antenna szimulációja}
+\author{Nyiri Levente}
+\date{2026 Január}
+
+\begin{document}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{BME.png}
+\end{figure}
+\selectlanguage{hungarian}
+\maketitle
+
+\newpage
+
+\section{Bevezetés}
+
+A Yagi-Uda antennát Shintaro Uda találta fel az 1920-as években, viszont eredményeit japánul dokumentálta, így a világ többi részén csak akkkor lett ismert, amikor Hidetsuru Yagi leírta az eredményeit angolul is. Annak ellenére, hogy kreditálta Uda munkáját, az antennára leggyakrabban csak Yagi antennaként hivatkoznak.
+
+Ez egy antenna rendszer, amelyben egy dipólantennát vesznek körül parazita elemekkel, hogy jobb irányítottságot érjenek el.
+
+Az elmúlt évtizedekben ez lett a legelterjedtebb antenna TV vételére VHF és UHF sávokon.
+
+Én a feladatomhoz kaptam a Tanár Úrtól egy dokumentumot, amelyben különböző Yagi antenna dimenziók vannak megadva VHF sávon, ebből fogok kiindulni, egy 58MHz-s antennát fogok tervezni a K 52 16 8 27-es oszlop alapján.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{kathrein.jpg} 
+    \caption{Antenna dimenziók}
+    \label{fig:kathrein}
+\end{figure}
+
+
+
+\clearpage
+
+\section{Elméleti ismeretek összefoglalása}
+
+Egy Yagi antenna 3 részből áll: egy reflektorból (ritkán alkalmaznak többet, mivel jelentősen nem javítja a reflektivitást, jelen esetben pont 3 lesz), egy táplált félhullámú dipólból (a továbbiakban DE, mint driven element-ként fogok rá hivatkozni) és egy vagy több direktorból.
+A felépítést a \ref{fig:yagi-konyv}. ábra mutatja. A DE leggyakrabban egy hajlított dipólus, én a szimulációban egyszerű vezetéket alkalmaztam.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Yagi-konyv.png} 
+    \caption{Yagi antenna általános felépítése \cite{balanis}}
+    \label{fig:yagi-konyv}
+\end{figure}
+
+A reflektor valamivel nagyobb, mint a DE, a direktorok pedig valamivel kisebbek.
+
+A sugárzási irány a direktorok irányába mutat, és minél több direktort használunk, annál jobb az irányító hatás, bár egy bizonyos szám fölött már elhanyagolható a javulás, inkább több Yagi antenna egymás mellé rakásával szoktak függönyantennát létrehozni.
+
+Mivel a reflektor hosszabb mint a DE, ezért az impedanciája induktív lesz, a direktoroké (mivel ők pedig rövidebbek) kapacitív. Ez egy fázisprogresszióhoz fog vezetni az antenna mentén, amely hasonló lesz egy haladóhulláméhoz, a DE terét a direktorok irányába fogja erősíteni. 
+
+A Yagi antenna rendszerre tekinthetünk egy olyan struktúraként, amely egy haladóhullámot támogat, amelynek a teljesítménye az egyes elemek árameloszlásán és a fázissebességen múlik \cite{balanis}.
+
+\clearpage
+
+\section{Tervezés}
+
+A tervezés során a célom, hogy eredményképpen egy olyan antennát kapjak, ami tükrözi az \ref{fig:kathrein}. ábrát, tehát amelynek a VSWR-je <1.15, gain legalább 6dBi, bemeneti impedancia 50$\Omega$ és hasonló iránykarakterisztikája van.
+
+A tervezés során a célom, hogy eredményképpen egy olyan antennát kapjak, amely tükrözi a(z) \ref{fig:kathrein}. ábrát, tehát:
+
+\begin{itemize}
+    \item \textbf{VSWR:} $< 1,15$.
+    \item \textbf{Gain:} Legalább 6 dBi.
+    \item \textbf{Bemeneti impedancia:} 50 $\Omega$.
+    \item \textbf{Iránykarakterisztika:} A \ref{fig:kathrein}. ábrához hasonló.
+\end{itemize}
+
+Az adott értékek:
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|lll|}
+        \hline
+        \textbf{Szimbólum} & \textbf{Leírás} & \textbf{Érték[m]} \\ \hline
+        A & Reflektor és utolsó direktor távolsága & 2.95 \\
+        B & Reflektor hossza & 2.51 \\
+        C & Reflektorok távolsága Z síkban & 1.95 \\ \hline
+    \end{tabular}
+    \caption{Az adott dimenziók}
+    \label{tab:dimenziok}
+\end{table}
+
+A szimulációt szabadtérben végeztem, a vezető anyagának rezet adtam meg, a kábelek sugarát 0.0025$\lambda$-nak választottam.
+
+Parazitikus elemek jelenlétében a DE optimális hossza nem pontosan 0.5$\lambda$, hanem valahol 0.45-0.49$\lambda$ között van \cite{balanis}.
+
+Bár az "Antenna Theory Analysis and Design" könyv azt írja, hogy tipikusan a direktorok közt 0.3-0.4$\lambda$ hely van, ez jelen esetben nem megvalósítható, mivel a reflektor és az utolsó direktor közti távolság adott, és túl nagy lenne a lépésköz. Más forrásokban azt találtam, hogy 0.25-0.005$\lambda$ közti távolságokat gyakran alkalmaznak \cite{yagi-video}.
+
+Az optimális tervhez a direktorok közti távolság nem konstans. Kiindulásképpen beállítottam ezeket a távolságokat megfelelő kompromisszumnak tűnő értékekre.
+
+Chen és Cheng kutatásán megihletődve ezután a 4nec2 optimizer-ének használatával optimalizáltam a távolságokat a direktorok között, először csak az SWR-re és a reaktanciára egyenlő súllyal. Ezután megadtam paraméternek a DE és a direktor hosszát is, a DE és a reflektor távolságát, és a DE-direktor illetve a direktorok távolságát, és előre-hátra viszonyra, SWR-re és reaktanciára egyenlő súlyokkal optimalizáltam még egyszer \cite{cheng}.
+
+Az eredeti és az optimalizált értékeket a \ref{tab:yagi_parameters}. táblázat mutatja.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|llll|}
+        \hline
+        \textbf{Szimbólum} & \textbf{Leírás} & \textbf{Eredeti érték} & \textbf{Optimalizált érték} \\ \hline
+        DE & Sugárzó hossza (Driven element) & 0.48$\lambda$ & 0.48$\lambda$ \\
+        DirLen & Direktorok hossza & 0.45$\lambda$ & 0.45$\lambda$ \\ 
+        RD & Reflektor--sugárzó távolság & 0.15$\lambda$ & 0.2$\lambda$ \\ 
+        DE\_D1 & Sugárzó--D1 távolság & 0.15$\lambda$ & 0.15$\lambda$ \\ 
+        D1\_D2 & D1--D2 távolság & 0.1$\lambda$ & 0.083$\lambda$ \\ 
+        D2\_D3 & D2--D3 távolság & 0.08$\lambda$ & 0.054$\lambda$ \\ 
+        D3\_D4 & D3--D4 távolság & 0.06$\lambda$ & 0.062$\lambda$ \\ \hline
+    \end{tabular}
+    \caption{A Yagi antenna eredeti és optimalizált paraméterei}
+    \label{tab:yagi_parameters}
+\end{table}
+
+\FloatBarrier
+
+Optimalizálás előtt a VSWR 4.45dB volt, utána 1.14, tehát jelentősen javult a geometriának az enyhe módosításával, anélkül, hogy a nyereséget befolyásolta volna.
+
+\begin{figure}[ht]
+     \centering
+     % Első kép
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{main-58-pre-opt.png}
+         \caption{Eredeti adatokkal mért eredmények}
+         \label{fig:main-pre}
+     \end{subfigure}
+     \hfill % Rugalmas köz kitöltése a két kép között
+     % Második kép
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{main-58.png}
+         \caption{Optimalizált adatokkal mért eredmények}
+         \label{fig:main}
+     \end{subfigure}
+     
+     \caption{Közös felirat a két képnek (pl. Eredeti és optimalizált állapot)}
+     \label{fig:osszehasonlitas}
+\end{figure}
+
+Balanis azt írta, hogy a reflektor és a DE távolsága főkéne az előre-hátra viszonyra és a bemeneti impedanciára van hatással, szóval kíváncsiságból minden mást változatlanul hagyva megváltoztattam a reflektor-DE távolságot 0.2$\lambda$-ra, és már így is 2.4-re javult a VSWR. 
+
+
+\end{document}
