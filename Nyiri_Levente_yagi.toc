@@ -1,0 +1,4 @@
+\select@language {hungarian} \contentsline {section}{\numberline {1}Bevezetés}{2}{}%
+\select@language {hungarian} \contentsline {section}{\numberline {2}Elméleti ismeretek összefoglalása}{3}{}%
+\select@language {hungarian} \contentsline {section}{\numberline {3}Tervezés}{4}{}%
+\select@language {hungarian} \contentsline {section}{\numberline {4}Összefoglalás}{10}{}%

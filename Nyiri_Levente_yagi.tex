@@ -1,8 +1,6 @@
-\documentclass[12pt, a4paper]{article} % FIXED: Removed 'letterpaper'
-
+\documentclass[12pt, a4paper]{article} 
 % --- MARGINS ---
-\usepackage[margin=2.5cm]{geometry} % This sets the borders
-
+\usepackage[margin=2.5cm]{geometry} 
 % --- PACKAGES ---
 \usepackage{graphicx}
 \usepackage{textcomp}
@@ -12,6 +10,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{csquotes}
+\usepackage{siunitx}
 
 % --- IMAGES PATH ---
 \graphicspath{{./Pictures/}{./Pictures/koax}{./Pictures/erosito}{./Pictures/Kisjelu-erositok}{./Pictures/Nagyjelu-erositok}{./Pictures/Keverok-es-oszcillatorok}{./Pictures/Forrasztos}}
@@ -53,12 +52,24 @@
 \date{2026 Január}
 
 \begin{document}
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{BME.png}
-\end{figure}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=\textwidth]{BME.png}\par\vspace{1cm}
+    
+    {\huge\bfseries Yagi antenna szimulációja \par}
+    \vspace{1.5cm}
+    {\Large\itshape Nyiri Levente \par}
+    \vspace{1cm}
+    {\large 2026. január \par}
+    
+    \vfill
+    % Itt maradhat üresen, vagy ide jöhet egyéb infó (pl. konzulens)
+\end{titlepage}
+
+\tableofcontents
+
 \selectlanguage{hungarian}
-\maketitle
 
 \newpage
 
@@ -107,8 +118,6 @@ A Yagi antenna rendszerre tekinthetünk egy olyan struktúraként, amely egy hal
 \clearpage
 
 \section{Tervezés}
-
-A tervezés során a célom, hogy eredményképpen egy olyan antennát kapjak, ami tükrözi az \ref{fig:kathrein}. ábrát, tehát amelynek a VSWR-je <1.15, gain legalább 6dBi, bemeneti impedancia 50$\Omega$ és hasonló iránykarakterisztikája van.
 
 A tervezés során a célom, hogy eredményképpen egy olyan antennát kapjak, amely tükrözi a(z) \ref{fig:kathrein}. ábrát, tehát:
 
@@ -164,7 +173,7 @@ Az eredeti és az optimalizált értékeket a \ref{tab:yagi_parameters}. táblá
 
 \FloatBarrier
 
-Optimalizálás előtt a VSWR 4.45dB volt, utána 1.14, tehát jelentősen javult a geometriának az enyhe módosításával, anélkül, hogy a nyereséget negatívan befolyásolta volna.
+Optimalizálás előtt a VSWR 4.45dB volt, utána 1.14, tehát jelentősen javult a geometriának az enyhe módosításával, anélkül, hogy a nyereséget negatívan befolyásolta volna. Az is látszik, hogy a DE és a direktorok hossza nem változott (illetve csak olyan csekély mértékben, hogy $\lambda$-ban kifejezve elhanyagolható).
 
 \begin{figure}[ht]
      \centering
@@ -188,10 +197,11 @@ Optimalizálás előtt a VSWR 4.45dB volt, utána 1.14, tehát jelentősen javul
 
 A reflektor és a DE távolsága főként az előre-hátra viszonyra és a bemeneti impedanciára van hatással \cite{balanis}, szóval kíváncsiságból minden mást változatlanul hagyva megváltoztattam a reflektor-DE távolságot 0.2$\lambda$-ra, és már így is 2.4-re javult a VSWR. 
 
-A következő ábrákon a feszültség függvényében látható az SWR, a nyereség, front-to-back és front-to-rear ratio, valamint az impedancia.
+A következő ábrákon a feszültség függvényében látható az SWR (\ref{fig:SWR}. ábra), a nyereség, front-to-back és front-to-rear ratio (\ref{fig:GAIN}. ábra), valamint az impedancia (\ref{fig:IMP}.ábra) .
 
-A ábrán látható az iránykarakterisztika.
-Az ábrákon pedig az antenna 3D modellje, az egyes szegmenseken folyó áramok nagysága és fázisa, valamint a távoltér 3D reprezentációja látható.
+A \ref{fig:irany}. ábrán látható az iránykarakterisztika.
+
+Az utánuk következő ábrákon pedig az antenna 3D modellje, az egyes szegmenseken folyó áramok nagysága és fázisa (\ref{fig:HE}. ábra), valamint a távoltér 3D reprezentációja látható (\ref{fig:TAVOLTER}. ábra).
 \begin{figure}[ht]
      \centering
      \begin{subfigure}[b]{0.48\textwidth}
@@ -293,5 +303,61 @@ Az ábrákon pedig az antenna 3D modellje, az egyes szegmenseken folyó áramok 
      \caption{3D modell és a szegmenseken folyó áramok}
      \label{fig:HE}
 \end{figure}
+
+\begin{figure}[ht]
+     \centering
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{color-58-1-pre-opt.png}
+         \caption{Eredeti}
+         \label{fig:tavolter-pre}
+     \end{subfigure}
+     \hfill 
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{color-58-1.png}
+         \caption{Optimalizált}
+         \label{fig:tavolter}
+     \end{subfigure}
+     
+     \caption{Távoltér 3D szimulációja}
+     \label{fig:TAVOLTER}
+\end{figure}
+
+\FloatBarrier
+
+\subsection*{Eredmények értékelése}
+Az \ref{fig:GAIN}. és \ref{fig:irany}. ábrán látszik, hogy az optimalizálás során romlott az előre-hátra viszony, 15.5dB-ről 9.17dB lett. Ez sajnos egy kompromisszum amit el kell fogadnunk az SWR javulásáért cserébe.
+
+A \ref{fig:fazis-aram}. ábrán jól látszik, hogy a reflektoron $\sim \ang{-120}$ a fázis, az első direktoron pedig $\sim \ang{+120}$, tehát a reflektornak induktív, a direktornak kapacitív az impedanciája.
+
+A célkitűzés az volt, hogy a VSWR legyen kisebb mint 1.15, a Gain nagyobb mint 6dBi, bemeneti impedancia 50$\Omega$ és az \ref{fig:kathrein}. ábrához hasonló legyen az iránykarakterisztika.
+
+A kitűzött és az elért értékeket a következő táblázat mutatja.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|lcc|}
+        \hline
+        \textbf{Paraméter} & \textbf{Kitűzött érték} & \textbf{Elért érték} \\ \hline
+        VSWR & <1.15 & 1.14 \\
+        Gain & >6dBi & 9.47dBi \\
+        Bemeneti impedancia & 50$\Omega$ & 43.89$\Omega$ \\ 
+        $\Theta_E$ & $\ang{68}$ & $\ang{62}$ \\
+        $\Theta_H$ & $\ang{128}$ & $\ang{50}$ \\ \hline 
+    \end{tabular}
+    \caption{Eredmények}
+    \label{tab:eredmeny}
+\end{table}
+
+A nyereség és a VSWR kiváló lett, az előre-hátra viszonyon és a főnyalábszélességen még lehetne javítani (már ha az a cél, hogy H síkban $\ang{128}$ legyen).
+
+\clearpage
+
+\section{Összefoglalás}
+
+
+\newpage
+\printbibliography
 
 \end{document}
