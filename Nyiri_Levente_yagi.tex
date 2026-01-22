@@ -22,7 +22,7 @@
 
 % --- CODE LISTINGS ---
 \usepackage{listings}
-\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{amsmath}
 \usepackage{placeins}
 
@@ -122,7 +122,7 @@ A tervezés során a célom, hogy eredményképpen egy olyan antennát kapjak, a
 Az adott értékek:
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|lll|}
+    \begin{tabular}{|clc|}
         \hline
         \textbf{Szimbólum} & \textbf{Leírás} & \textbf{Érték[m]} \\ \hline
         A & Reflektor és utolsó direktor távolsága & 2.95 \\
@@ -147,16 +147,16 @@ Az eredeti és az optimalizált értékeket a \ref{tab:yagi_parameters}. táblá
 
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|llll|}
+    \begin{tabular}{|lcc|}
         \hline
-        \textbf{Szimbólum} & \textbf{Leírás} & \textbf{Eredeti érték} & \textbf{Optimalizált érték} \\ \hline
-        DE & Sugárzó hossza (Driven element) & 0.48$\lambda$ & 0.48$\lambda$ \\
-        DirLen & Direktorok hossza & 0.45$\lambda$ & 0.45$\lambda$ \\ 
-        RD & Reflektor--sugárzó távolság & 0.15$\lambda$ & 0.2$\lambda$ \\ 
-        DE\_D1 & Sugárzó--D1 távolság & 0.15$\lambda$ & 0.15$\lambda$ \\ 
-        D1\_D2 & D1--D2 távolság & 0.1$\lambda$ & 0.083$\lambda$ \\ 
-        D2\_D3 & D2--D3 távolság & 0.08$\lambda$ & 0.054$\lambda$ \\ 
-        D3\_D4 & D3--D4 távolság & 0.06$\lambda$ & 0.062$\lambda$ \\ \hline
+        \textbf{Paraméter} & \textbf{Eredeti érték} & \textbf{Optimalizált érték} \\ \hline
+        Sugárzó hossza (DE) & 0.48$\lambda$ & 0.48$\lambda$ \\
+        Direktorok hossza & 0.45$\lambda$ & 0.45$\lambda$ \\ 
+        Reflektor--DE távolság & 0.15$\lambda$ & 0.2$\lambda$ \\ 
+        Sugárzó--D1 távolság & 0.15$\lambda$ & 0.15$\lambda$ \\ 
+        D1--D2 távolság & 0.1$\lambda$ & 0.083$\lambda$ \\ 
+        D2--D3 távolság & 0.08$\lambda$ & 0.054$\lambda$ \\ 
+        D3--D4 távolság & 0.06$\lambda$ & 0.062$\lambda$ \\ \hline
     \end{tabular}
     \caption{A Yagi antenna eredeti és optimalizált paraméterei}
     \label{tab:yagi_parameters}
@@ -164,19 +164,17 @@ Az eredeti és az optimalizált értékeket a \ref{tab:yagi_parameters}. táblá
 
 \FloatBarrier
 
-Optimalizálás előtt a VSWR 4.45dB volt, utána 1.14, tehát jelentősen javult a geometriának az enyhe módosításával, anélkül, hogy a nyereséget befolyásolta volna.
+Optimalizálás előtt a VSWR 4.45dB volt, utána 1.14, tehát jelentősen javult a geometriának az enyhe módosításával, anélkül, hogy a nyereséget negatívan befolyásolta volna.
 
 \begin{figure}[ht]
      \centering
-     % Első kép
      \begin{subfigure}[b]{0.48\textwidth}
          \centering
          \includegraphics[width=\textwidth]{main-58-pre-opt.png}
          \caption{Eredeti adatokkal mért eredmények}
          \label{fig:main-pre}
      \end{subfigure}
-     \hfill % Rugalmas köz kitöltése a két kép között
-     % Második kép
+     \hfill 
      \begin{subfigure}[b]{0.48\textwidth}
          \centering
          \includegraphics[width=\textwidth]{main-58.png}
@@ -184,11 +182,116 @@ Optimalizálás előtt a VSWR 4.45dB volt, utána 1.14, tehát jelentősen javul
          \label{fig:main}
      \end{subfigure}
      
-     \caption{Közös felirat a két képnek (pl. Eredeti és optimalizált állapot)}
+     \caption{Eredeti és optimalizált állapot}
      \label{fig:osszehasonlitas}
 \end{figure}
 
-Balanis azt írta, hogy a reflektor és a DE távolsága főkéne az előre-hátra viszonyra és a bemeneti impedanciára van hatással, szóval kíváncsiságból minden mást változatlanul hagyva megváltoztattam a reflektor-DE távolságot 0.2$\lambda$-ra, és már így is 2.4-re javult a VSWR. 
+A reflektor és a DE távolsága főként az előre-hátra viszonyra és a bemeneti impedanciára van hatással \cite{balanis}, szóval kíváncsiságból minden mást változatlanul hagyva megváltoztattam a reflektor-DE távolságot 0.2$\lambda$-ra, és már így is 2.4-re javult a VSWR. 
 
+A következő ábrákon a feszültség függvényében látható az SWR, a nyereség, front-to-back és front-to-rear ratio, valamint az impedancia.
+
+A ábrán látható az iránykarakterisztika.
+Az ábrákon pedig az antenna 3D modellje, az egyes szegmenseken folyó áramok nagysága és fázisa, valamint a távoltér 3D reprezentációja látható.
+\begin{figure}[ht]
+     \centering
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{SWR-58-pre-opt.png}
+         \caption{Eredeti}
+         \label{fig:swr-pre}
+     \end{subfigure}
+     \hfill 
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{SWR-58.png}
+         \caption{Optimalizált}
+         \label{fig:swr}
+     \end{subfigure}
+     
+     \caption{Eredeti és optimalizált \textcolor{blue}{SWR} és \textcolor{red}{reflexiós} tényező frekvencia függvényében}
+     \label{fig:SWR}
+\end{figure}
+
+
+\begin{figure}[ht]
+     \centering
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{gain-58-pre-opt.png}
+         \caption{Eredeti}
+         \label{fig:gain-pre}
+     \end{subfigure}
+     \hfill 
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{gain-58.png}
+         \caption{Optimalizált}
+         \label{fig:gain}
+     \end{subfigure}
+     
+     \caption{Eredeti és optimalizált \textcolor{blue}{nyereség} és \textcolor{red}{F/B} valamint \textcolor{ForestGreen}{F/R}}
+     \label{fig:GAIN}
+\end{figure}
+
+\begin{figure}[ht]
+     \centering
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imp-58-pre-opt.png}
+         \caption{Eredeti}
+         \label{fig:imp-pre}
+     \end{subfigure}
+     \hfill 
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imp-58.png}
+         \caption{Optimalizált}
+         \label{fig:imp}
+     \end{subfigure}
+     
+     \caption{Eredeti és optimalizált \textcolor{blue}{ellenállás}, \textcolor{red}{reaktancia}, \textcolor{ForestGreen}{impedancia} és \textcolor{magenta}{fázis}}
+     \label{fig:IMP}
+\end{figure}
+
+
+\begin{figure}[ht]
+     \centering
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{H-E-58-pre-opt.png}
+         \caption{Eredeti}
+         \label{fig:H-E-pre}
+     \end{subfigure}
+     \hfill 
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{H-E-58.png}
+         \caption{Optimalizált}
+         \label{fig:he}
+     \end{subfigure}
+     
+     \caption{Eredeti és optimalizált iránykarakterisztika}
+     \label{fig:irany}
+\end{figure}
+
+\begin{figure}[ht]
+     \centering
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{3D-58.png}
+         \caption{3D modell}
+         \label{fig:3D}
+     \end{subfigure}
+     \hfill 
+     \begin{subfigure}[b]{0.465\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{fazis-aram-58.png}
+         \caption{Áram nagysága és fázisa}
+         \label{fig:fazis-aram}
+     \end{subfigure}
+     
+     \caption{3D modell és a szegmenseken folyó áramok}
+     \label{fig:HE}
+\end{figure}
 
 \end{document}
