@@ -242,6 +242,11 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT ./Pictures/dir-spacing-balanis.png
+INPUT ./Pictures/dir-spacing-balanis.png
+INPUT ./Pictures/dir-spacing-balanis.png
+INPUT ./Pictures/dir-spacing-balanis.png
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./Pictures/main-58-pre-opt.png
 INPUT ./Pictures/main-58-pre-opt.png
 INPUT ./Pictures/main-58-pre-opt.png
@@ -251,7 +256,6 @@ INPUT ./Pictures/main-58.png
 INPUT ./Pictures/main-58.png
 INPUT ./Pictures/main-58.png
 INPUT ./Pictures/main-58.png
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./Pictures/SWR-58-pre-opt.png
 INPUT ./Pictures/SWR-58-pre-opt.png
 INPUT ./Pictures/SWR-58-pre-opt.png

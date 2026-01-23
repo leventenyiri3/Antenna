@@ -75,7 +75,7 @@
 
 \section{Bevezetés}
 
-A Yagi-Uda antennát Shintaro Uda találta fel az 1920-as években, viszont eredményeit japánul dokumentálta, így a világ többi részén csak akkkor lett ismert, amikor Hidetsuru Yagi leírta az eredményeit angolul is. Annak ellenére, hogy kreditálta Uda munkáját, az antennára leggyakrabban csak Yagi antennaként hivatkoznak.
+A Yagi-Uda antennát Shintaro Uda és Hidetsuru Yagi találta fel az 1920-as években. Uda Yagi asszisztense volt, eredetileg eredményeiket japánul dokumentálta, így a világ többi részén csak akkor lett ismert, amikor Yagi  leírta azokat angolul is. Annak ellenére, hogy kreditálta Uda munkáját, az antennára leggyakrabban csak Yagi antennaként hivatkoznak.
 
 Ez egy antenna rendszer, amelyben egy dipólantennát vesznek körül parazita elemekkel, hogy jobb irányítottságot érjenek el.
 
@@ -150,7 +150,15 @@ Bár az "Antenna Theory Analysis and Design" könyv azt írja, hogy tipikusan a 
 
 Az optimális tervhez a direktorok közti távolság nem konstans. Kiindulásképpen beállítottam ezeket a távolságokat megfelelő kompromisszumnak tűnő értékekre.
 
-Chen és Cheng kutatásán megihletődve ezután a 4nec2 optimizer-ének használatával optimalizáltam a távolságokat a direktorok között, először csak az SWR-re és a reaktanciára egyenlő súllyal. Ezután megadtam paraméternek a DE és a direktor hosszát is, a DE és a reflektor távolságát, és a DE-direktor illetve a direktorok távolságát, és előre-hátra viszonyra, SWR-re és reaktanciára egyenlő súlyokkal optimalizáltam még egyszer \cite{cheng}.
+
+A Chen és Cheng által publikált optimalizálási eljárását látva \cite{cheng}, illetve figyelembe véve, hogy a front-to-back ratio milyen érzékeny a direktorok távolságára (lásd \ref{fig:dir-spacing-balanis}. ábra), a 4nec2 optimizer használatával finomhangoltam ezeket a paramétereket.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{dir-spacing-balanis.png} 
+    \caption{Front-to-back ratio érzékenysége a direktorok távolságaira \cite{balanis}}
+    \label{fig:dir-spacing-balanis}
+\end{figure}
+Először csak az SWR-re és a reaktanciára egyenlő súllyal futtattam csak a direktorok távolságára. A következő futtatásnál megadtam paraméternek a DE és a direktor hosszát is, a DE és a reflektor távolságát, és a DE-direktor illetve a direktorok távolságát. Ezúttal előre-hátra viszonyra, SWR-re és reaktanciára egyenlő súlyokkal optimalizáltam.
 
 Az eredeti és az optimalizált értékeket a \ref{tab:yagi_parameters}. táblázat mutatja.
 
