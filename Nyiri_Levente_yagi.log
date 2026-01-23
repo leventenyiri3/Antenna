@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.1)  23 JAN 2026 10:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.1)  23 JAN 2026 11:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -688,107 +688,107 @@ Package pdftex.def Info: ./Pictures/BME.png  used on input line 58.
 
 
 [1]
-<./Pictures/kathrein.jpg, id=18, 2308.625pt x 3011.25pt>
+<./Pictures/kathrein.jpg, id=20, 2308.625pt x 3011.25pt>
 File: ./Pictures/kathrein.jpg Graphic file (type jpg)
 <use ./Pictures/kathrein.jpg>
-Package pdftex.def Info: ./Pictures/kathrein.jpg  used on input line 88.
+Package pdftex.def Info: ./Pictures/kathrein.jpg  used on input line 96.
 (pdftex.def)             Requested size: 364.19667pt x 475.00955pt.
 
 
 [2 <./Pictures/kathrein.jpg>]
-<./Pictures/Yagi-konyv.png, id=22, 289.83281pt x 232.61906pt>
+<./Pictures/Yagi-konyv.png, id=24, 289.83281pt x 232.61906pt>
 File: ./Pictures/Yagi-konyv.png Graphic file (type png)
 <use ./Pictures/Yagi-konyv.png>
-Package pdftex.def Info: ./Pictures/Yagi-konyv.png  used on input line 105.
+Package pdftex.def Info: ./Pictures/Yagi-konyv.png  used on input line 113.
 (pdftex.def)             Requested size: 273.14923pt x 219.2405pt.
 
 
 [3
 
  <./Pictures/Yagi-konyv.png>]
-<./Pictures/dir-spacing-balanis.png, id=27, 509.905pt x 351.3125pt>
+<./Pictures/dir-spacing-balanis.png, id=29, 2473.24pt x 1734.48pt>
 File: ./Pictures/dir-spacing-balanis.png Graphic file (type png)
 <use ./Pictures/dir-spacing-balanis.png>
-Package pdftex.def Info: ./Pictures/dir-spacing-balanis.png  used on input line 157.
-(pdftex.def)             Requested size: 318.66948pt x 219.5644pt.
+Package pdftex.def Info: ./Pictures/dir-spacing-balanis.png  used on input line 165.
+(pdftex.def)             Requested size: 318.66948pt x 223.4789pt.
 
 
 [4
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<./Pictures/main-58-pre-opt.png, id=34, 276.28218pt x 128.73094pt>
+<./Pictures/main-58-pre-opt.png, id=36, 276.28218pt x 128.73094pt>
 File: ./Pictures/main-58-pre-opt.png Graphic file (type png)
 <use ./Pictures/main-58-pre-opt.png>
-Package pdftex.def Info: ./Pictures/main-58-pre-opt.png  used on input line 190.
+Package pdftex.def Info: ./Pictures/main-58-pre-opt.png  used on input line 198.
 (pdftex.def)             Requested size: 218.51521pt x 101.81416pt.
-<./Pictures/main-58.png, id=35, 282.30469pt x 130.98938pt>
+<./Pictures/main-58.png, id=37, 282.30469pt x 130.98938pt>
 File: ./Pictures/main-58.png Graphic file (type png)
 <use ./Pictures/main-58.png>
-Package pdftex.def Info: ./Pictures/main-58.png  used on input line 197.
+Package pdftex.def Info: ./Pictures/main-58.png  used on input line 205.
 (pdftex.def)             Requested size: 218.51521pt x 101.39178pt.
-<./Pictures/SWR-58-pre-opt.png, id=36, 764.8575pt x 744.53156pt>
+<./Pictures/SWR-58-pre-opt.png, id=38, 764.8575pt x 744.53156pt>
 File: ./Pictures/SWR-58-pre-opt.png Graphic file (type png)
 <use ./Pictures/SWR-58-pre-opt.png>
-Package pdftex.def Info: ./Pictures/SWR-58-pre-opt.png  used on input line 217.
+Package pdftex.def Info: ./Pictures/SWR-58-pre-opt.png  used on input line 225.
 (pdftex.def)             Requested size: 218.51521pt x 212.70493pt.
-<./Pictures/SWR-58.png, id=37, 766.36313pt x 746.79pt>
+<./Pictures/SWR-58.png, id=39, 766.36313pt x 746.79pt>
 File: ./Pictures/SWR-58.png Graphic file (type png)
 <use ./Pictures/SWR-58.png>
-Package pdftex.def Info: ./Pictures/SWR-58.png  used on input line 224.
+Package pdftex.def Info: ./Pictures/SWR-58.png  used on input line 232.
 (pdftex.def)             Requested size: 218.51521pt x 212.92851pt.
-<./Pictures/gain-58-pre-opt.png, id=38, 763.35187pt x 746.79pt>
+<./Pictures/gain-58-pre-opt.png, id=40, 763.35187pt x 746.79pt>
 File: ./Pictures/gain-58-pre-opt.png Graphic file (type png)
 <use ./Pictures/gain-58-pre-opt.png>
-Package pdftex.def Info: ./Pictures/gain-58-pre-opt.png  used on input line 238.
+Package pdftex.def Info: ./Pictures/gain-58-pre-opt.png  used on input line 246.
 (pdftex.def)             Requested size: 218.51521pt x 213.77174pt.
-<./Pictures/gain-58.png, id=39, 765.6103pt x 747.54282pt>
+<./Pictures/gain-58.png, id=41, 765.6103pt x 747.54282pt>
 File: ./Pictures/gain-58.png Graphic file (type png)
 <use ./Pictures/gain-58.png>
-Package pdftex.def Info: ./Pictures/gain-58.png  used on input line 245.
+Package pdftex.def Info: ./Pictures/gain-58.png  used on input line 253.
 (pdftex.def)             Requested size: 218.51521pt x 213.3599pt.
-<./Pictures/imp-58-pre-opt.png, id=40, 761.84625pt x 744.53156pt>
+<./Pictures/imp-58-pre-opt.png, id=42, 761.84625pt x 744.53156pt>
 File: ./Pictures/imp-58-pre-opt.png Graphic file (type png)
 <use ./Pictures/imp-58-pre-opt.png>
-Package pdftex.def Info: ./Pictures/imp-58-pre-opt.png  used on input line 258.
+Package pdftex.def Info: ./Pictures/imp-58-pre-opt.png  used on input line 266.
 (pdftex.def)             Requested size: 218.51521pt x 213.54561pt.
-<./Pictures/imp-58.png, id=41, 765.6103pt x 746.03719pt>
+<./Pictures/imp-58.png, id=43, 765.6103pt x 746.03719pt>
 File: ./Pictures/imp-58.png Graphic file (type png)
 <use ./Pictures/imp-58.png>
-Package pdftex.def Info: ./Pictures/imp-58.png  used on input line 265.
+Package pdftex.def Info: ./Pictures/imp-58.png  used on input line 273.
 (pdftex.def)             Requested size: 218.51521pt x 212.93016pt.
-<./Pictures/H-E-58-pre-opt.png, id=42, 789.70032pt x 791.20593pt>
+<./Pictures/H-E-58-pre-opt.png, id=44, 789.70032pt x 791.20593pt>
 File: ./Pictures/H-E-58-pre-opt.png Graphic file (type png)
 <use ./Pictures/H-E-58-pre-opt.png>
-Package pdftex.def Info: ./Pictures/H-E-58-pre-opt.png  used on input line 279.
+Package pdftex.def Info: ./Pictures/H-E-58-pre-opt.png  used on input line 287.
 (pdftex.def)             Requested size: 218.51521pt x 218.92842pt.
-<./Pictures/H-E-58.png, id=43, 791.95876pt x 790.45313pt>
+<./Pictures/H-E-58.png, id=45, 791.95876pt x 790.45313pt>
 File: ./Pictures/H-E-58.png Graphic file (type png)
 <use ./Pictures/H-E-58.png>
-Package pdftex.def Info: ./Pictures/H-E-58.png  used on input line 286.
+Package pdftex.def Info: ./Pictures/H-E-58.png  used on input line 294.
 (pdftex.def)             Requested size: 218.51521pt x 218.09293pt.
-<./Pictures/3D-58.png, id=44, 359.84438pt x 342.5297pt>
+<./Pictures/3D-58.png, id=46, 359.84438pt x 342.5297pt>
 File: ./Pictures/3D-58.png Graphic file (type png)
 <use ./Pictures/3D-58.png>
-Package pdftex.def Info: ./Pictures/3D-58.png  used on input line 299.
+Package pdftex.def Info: ./Pictures/3D-58.png  used on input line 307.
 (pdftex.def)             Requested size: 218.51521pt x 208.00725pt.
-<./Pictures/fazis-aram-58.png, id=45, 317.68687pt x 313.17pt>
+<./Pictures/fazis-aram-58.png, id=47, 317.68687pt x 313.17pt>
 File: ./Pictures/fazis-aram-58.png Graphic file (type png)
 <use ./Pictures/fazis-aram-58.png>
-Package pdftex.def Info: ./Pictures/fazis-aram-58.png  used on input line 306.
+Package pdftex.def Info: ./Pictures/fazis-aram-58.png  used on input line 314.
 (pdftex.def)             Requested size: 211.68684pt x 208.6855pt.
-<./Pictures/color-58-1-pre-opt.png, id=46, 812.28468pt x 639.89063pt>
+<./Pictures/color-58-1-pre-opt.png, id=48, 812.28468pt x 639.89063pt>
 File: ./Pictures/color-58-1-pre-opt.png Graphic file (type png)
 <use ./Pictures/color-58-1-pre-opt.png>
-Package pdftex.def Info: ./Pictures/color-58-1-pre-opt.png  used on input line 319.
+Package pdftex.def Info: ./Pictures/color-58-1-pre-opt.png  used on input line 327.
 (pdftex.def)             Requested size: 218.51521pt x 172.13812pt.
-<./Pictures/color-58-1.png, id=47, 808.52063pt x 639.13782pt>
+<./Pictures/color-58-1.png, id=49, 808.52063pt x 639.13782pt>
 File: ./Pictures/color-58-1.png Graphic file (type png)
 <use ./Pictures/color-58-1.png>
-Package pdftex.def Info: ./Pictures/color-58-1.png  used on input line 326.
+Package pdftex.def Info: ./Pictures/color-58-1.png  used on input line 334.
 (pdftex.def)             Requested size: 218.51521pt x 172.7353pt.
 
 
-[5 <./Pictures/dir-spacing-balanis.png (PNG copy)>]
+[5 <./Pictures/dir-spacing-balanis.png>]
 
 [6 <./Pictures/main-58-pre-opt.png> <./Pictures/main-58.png> <./Pictures/SWR-58-pre-opt.png> <./Pictures/SWR-58.png> <./Pictures/gain-58-pre-opt.png> <./Pictures/gain-58.png>]
 
@@ -816,16 +816,16 @@ Package logreq Info: Writing requests to 'Nyiri_Levente_yagi.run.xml'.
 Here is how much of TeX's memory you used:
  20994 strings out of 467801
  426409 string characters out of 5431917
- 1258310 words of memory out of 5000000
+ 1258314 words of memory out of 5000000
  49438 multiletter control sequences out of 15000+600000
  639874 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,11n,80p,707b,2405s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Nyiri_Levente_yagi.pdf (12 pages, 1832615 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on Nyiri_Levente_yagi.pdf (12 pages, 5255615 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 169 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

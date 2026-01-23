@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber Nyiri_Levente_yagi"] 1769155312.72753 "Nyiri_Levente_yagi.bcf" "Nyiri_Levente_yagi.bbl" "Nyiri_Levente_yagi" 1769160154.37565 0
-  "Nyiri_Levente_yagi.bcf" 1769160154.29746 108361 ec54e9b65ffa2ec36ae90c461c18e081 "pdflatex"
+["biber Nyiri_Levente_yagi"] 1769162745.65348 "Nyiri_Levente_yagi.bcf" "Nyiri_Levente_yagi.bbl" "Nyiri_Levente_yagi" 1769162764.80467 0
+  "Nyiri_Levente_yagi.bcf" 1769162764.72443 108361 ec54e9b65ffa2ec36ae90c461c18e081 "pdflatex"
   "forrasok.bib" 1769086778.84182 925 4d9925ed2d45e78a919a8c1c738b515e ""
   (generated)
   "Nyiri_Levente_yagi.bbl"
   "Nyiri_Levente_yagi.blg"
   (rewritten before read)
-["pdflatex"] 1769160152.47032 "Nyiri_Levente_yagi.tex" "Nyiri_Levente_yagi.pdf" "Nyiri_Levente_yagi" 1769160154.37592 0
+["pdflatex"] 1769162755.61318 "Nyiri_Levente_yagi.tex" "Nyiri_Levente_yagi.pdf" "Nyiri_Levente_yagi" 1769162764.80496 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -49,6 +49,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb" 1215737283 145929 f25e56369a345c4ff583b067cd87ce8e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1215737283 136101 f533469f523533d38317ab5729d00c8a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb" 1215737283 131078 d96015a2fa5c350129e933ca070b2484 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb" 1215737283 131438 3aa300b3e40e5c8ba7b4e5c6cebc5dd6 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb" 1215737283 198221 ca5aa71411090ef358a6cc78b7458365 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb" 1215737283 179164 d2fc35b130efab2ed82ad3396ec43a38 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb" 1215737283 167085 68de377d2744a68a88fa40a1f610615a ""
@@ -132,11 +133,11 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1754037930 5526361 5adee4aa342457daf971a29efd2119d0 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1754038062 3605723 c1007134c0de2c8854b3f827b4d39407 ""
   "/usr/local/texlive/2025/texmf.cnf" 1754037927.02921 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "Nyiri_Levente_yagi.aux" 1769160154.29565 6181 be82e83770d5b086dc851f21fe8601e0 "pdflatex"
-  "Nyiri_Levente_yagi.bbl" 1769155313.47022 4635 82b0911cb45f4674cbd8f95b136b7344 "biber Nyiri_Levente_yagi"
-  "Nyiri_Levente_yagi.run.xml" 1769160154.29884 2565 0b3790d87f250ffbea4c5651011eeb73 "pdflatex"
-  "Nyiri_Levente_yagi.tex" 1769160150.79564 15611 04de4461bf599c58161087d3083a03f5 ""
-  "Nyiri_Levente_yagi.toc" 1769160154.29884 375 394b7420c4b533c74a046313b7f3880c "pdflatex"
+  "Nyiri_Levente_yagi.aux" 1769162764.72343 6181 be82e83770d5b086dc851f21fe8601e0 "pdflatex"
+  "Nyiri_Levente_yagi.bbl" 1769162746.40241 4635 82b0911cb45f4674cbd8f95b136b7344 "biber Nyiri_Levente_yagi"
+  "Nyiri_Levente_yagi.run.xml" 1769162764.72601 2565 0b3790d87f250ffbea4c5651011eeb73 "pdflatex"
+  "Nyiri_Levente_yagi.tex" 1769162728.4374 15775 c4ec52db608dc53799f18d19b5e57a50 ""
+  "Nyiri_Levente_yagi.toc" 1769162764.72601 375 394b7420c4b533c74a046313b7f3880c "pdflatex"
   "Pictures/3D-58.png" 1769075182 17383 6e5f20c8acdd486a0cc90205bb9a0496 ""
   "Pictures/BME.png" 1758801323.68494 7797 0e7bb921739505c79b2c9ea67a498e9c ""
   "Pictures/H-E-58-pre-opt.png" 1769080208 78844 51823ba25c8a8f4083cb6bafbf56bb84 ""
@@ -146,7 +147,7 @@
   "Pictures/Yagi-konyv.png" 1768998542 15888 fbba4b4e27dca332603c02547f972d48 ""
   "Pictures/color-58-1-pre-opt.png" 1769080320 149964 5a01f32b95b68e9b93761198c0082cee ""
   "Pictures/color-58-1.png" 1769076616 153275 bedd2a486ead54a837f8033fad735ae6 ""
-  "Pictures/dir-spacing-balanis.png" 1769155006.5174 60347 37b6c655b697e8ef53b9491e32842a51 ""
+  "Pictures/dir-spacing-balanis.png" 1769161225.23657 5299532 8068d6fb81a5f1136a89b76c23000a63 ""
   "Pictures/fazis-aram-58.png" 1769075120 11774 2fc232ba66f619a0bdb23d2c367150a2 ""
   "Pictures/gain-58-pre-opt.png" 1769077366 22586 fc72ddcd522c3773678c56d399318605 ""
   "Pictures/gain-58.png" 1769076911 21568 0031bfd266f4331d63719bb727c3f67f ""

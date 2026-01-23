@@ -49,19 +49,27 @@
 
 \title{Yagi antenna szimulációja}
 \author{Nyiri Levente}
-\date{2026 Január}
+\date{2026 január 23.}
 
 \begin{document}
 
 \begin{titlepage}
     \centering
-    \includegraphics[width=\textwidth]{BME.png}\par\vspace{1cm}
+    \includegraphics[width=\textwidth]{BME.png}\par\vspace{0.5cm}
     
+    {\large\bfseries Budapesti Műszaki és Gazdaságtudományi Egyetem \par}
+    {\large Villamosmérnöki és Informatikai Kar \par}
+    {\large Szélessávú Hírközlés és Villamosságtan Tanszék \par}
+
+    \vspace{1.5cm}
+
     {\huge\bfseries Yagi antenna szimulációja \par}
     \vspace{1.5cm}
-    {\Large\itshape Nyiri Levente \par}
-    \vspace{1cm}
-    {\large 2026. január \par}
+    {\Large\itshape Készítette \par}
+    \vspace{0.1cm}
+    {\Large Nyiri Levente \par}
+    \vspace{10cm}
+    {\large 2026. január 23.\par}
     
     \vfill
     % Itt maradhat üresen, vagy ide jöhet egyéb infó (pl. konzulens)
@@ -81,7 +89,7 @@ Ez egy antennarendszer, amelyben egy dipólantennát vesznek körül parazita el
 
 Az elmúlt évtizedekben ez lett a legelterjedtebb antenna TV vételére VHF és UHF sávokon.
 
-A feladatomhoz kaptam  egy dokumentumot, amelyben különböző Yagi antenna dimenziók vannak megadva VHF sávon, ebből fogok kiindulni, egy 58 MHz-es antennát fogok tervezni a K 52 16 8 27-es oszlop alapján.
+A feladatomhoz kaptam  egy dokumentumot, amelyben különböző Yagi antenna dimenziók vannak megadva VHF sávon, ebből fogok kiindulni. Egy 58 MHz-es antennát fogok tervezni a K 52 16 8 27-es oszlop alapján.
 
 \begin{figure}[ht]
     \centering
@@ -119,7 +127,7 @@ A Yagi antennarendszerre tekinthetünk egy olyan struktúraként, amely egy hala
 
 \section{Tervezés}
 
-A tervezés során a célom, hogy eredményképpen egy olyan antennát kapjak, amely tükrözi a(z) \ref{fig:kathrein}. ábrát, tehát:
+A tervezés során a célom, hogy eredményképpen egy olyan antennát kapjak, amely tükrözi az \ref{fig:kathrein}. ábrát, tehát:
 
 \begin{itemize}
     \item \textbf{VSWR:} $< 1.15$.
@@ -158,7 +166,7 @@ A Chen és Cheng által publikált optimalizálási eljárását látva \cite{ch
     \caption{Front-to-back ratio érzékenysége a direktorok távolságaira \cite{balanis}}
     \label{fig:dir-spacing-balanis}
 \end{figure}
-Először csak az SWR-re és a reaktanciára egyenlő súllyal futtattam csak a direktorok távolságára. A következő futtatásnál megadtam paraméternek a DE és a direktor hosszát is, a DE és a reflektor távolságát, és a DE-direktor illetve a direktorok távolságát. Ezúttal előre-hátra viszonyra, SWR-re és reaktanciára egyenlő súlyokkal optimalizáltam.
+Először csak az SWR-re és a reaktanciára egyenlő súllyal futtattam csak a direktorok távolságát módosítva. A következő futtatásnál megadtam paraméternek a DE és a direktor hosszát is, a DE és a reflektor távolságát, és a DE-direktor illetve a direktorok távolságát. Ezúttal előre-hátra viszonyra, SWR-re és reaktanciára egyenlő súlyokkal optimalizáltam.
 
 Az eredeti és az optimalizált értékeket a \ref{tab:yagi_parameters}. táblázat mutatja.
 
@@ -203,7 +211,7 @@ Optimalizálás előtt a VSWR 4.45 volt, utána 1.14, tehát jelentősen javult 
      \label{fig:osszehasonlitas}
 \end{figure}
 
-A reflektor és a DE távolsága főként az előre-hátra viszonyra és a bemeneti impedanciára van hatással \cite{balanis}, szóval kíváncsiságból minden mást változatlanul hagyva megváltoztattam a reflektor-DE távolságot 0.2$\lambda$-ra, és már így is 2.4-re javult a VSWR. 
+A reflektor és a DE távolsága főként az előre-hátra viszonyra és a bemeneti impedanciára van hatással \cite{balanis}, szóval kíváncsiságból minden mást változatlanul hagyva megváltoztattam a reflektor-DE távolságot (az optimalizálatlan file-ban) 0.2$\lambda$-ra, és már így is 2.4-re javult a VSWR. 
 
 A következő ábrákon a frekvencia függvényében látható az SWR (\ref{fig:SWR}. ábra), a nyereség, front-to-back és front-to-rear ratio (\ref{fig:GAIN}. ábra), valamint az impedancia (\ref{fig:IMP}.ábra) .
 
@@ -335,11 +343,9 @@ Az utánuk következő ábrákon pedig az antenna 3D modellje, az egyes szegmens
 \FloatBarrier
 
 \subsection*{Eredmények értékelése}
-Az \ref{fig:GAIN}. és \ref{fig:irany}. ábrán látszik, hogy az optimalizálás során romlott az előre-hátra viszony, 15.5dB-ről 9.17dB lett. Ez sajnos egy kompromisszum amit el kell fogadnunk az SWR javulásáért cserébe.
+A \ref{fig:GAIN}. és \ref{fig:irany}. ábrán látszik, hogy az optimalizálás során romlott az előre-hátra viszony, 15.5dB-ről 9.17dB lett. Ez sajnos egy kompromisszum amit el kell fogadnunk az SWR javulásáért cserébe.
 
-A \ref{fig:fazis-aram}. ábrán jól látszik, hogy a reflektoron $\sim \ang{-120}$ a fázis, az első direktoron pedig $\sim \ang{+120}$, tehát a reflektornak induktív, a direktornak kapacitív az impedanciája.
-
-A célkitűzés az volt, hogy a VSWR legyen kisebb mint 1.15, a Gain nagyobb mint 6dBi, bemeneti impedancia 50$\Omega$ és az \ref{fig:kathrein}. ábrához hasonló legyen az iránykarakterisztika.
+A \ref{fig:fazis-aram}. ábrán jól látszik, hogy a reflektoron $\sim \ang{-120}$ , az első direktoron pedig $\sim \ang{+120}$ a fázis a DE áramához képest, tehát a reflektornak induktív, a direktornak kapacitív az impedanciája.
 
 A kitűzött és az elért értékeket a következő táblázat mutatja.
 
@@ -358,7 +364,7 @@ A kitűzött és az elért értékeket a következő táblázat mutatja.
     \label{tab:eredmeny}
 \end{table}
 
-A nyereség és a VSWR kiváló lett, a főnyalábszélességekkel is elégedett vagyok (hacsak nem kifejezetten cél, hogy H síkban nagyobb legyen), az előre-hátra viszony nem éri el a várt értéket.
+A nyereség és a VSWR kiváló lett, a főnyalábszélességekkel is elégedett vagyok (hacsak nem kifejezetten cél, hogy H síkban nagyobb legyen), az előre-hátra viszony viszont nem éri el a várt értéket.
 
 \clearpage
 
