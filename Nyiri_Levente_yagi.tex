@@ -205,7 +205,7 @@ Optimalizálás előtt a VSWR 4.45dB volt, utána 1.14, tehát jelentősen javul
 
 A reflektor és a DE távolsága főként az előre-hátra viszonyra és a bemeneti impedanciára van hatással \cite{balanis}, szóval kíváncsiságból minden mást változatlanul hagyva megváltoztattam a reflektor-DE távolságot 0.2$\lambda$-ra, és már így is 2.4-re javult a VSWR. 
 
-A következő ábrákon a feszültség függvényében látható az SWR (\ref{fig:SWR}. ábra), a nyereség, front-to-back és front-to-rear ratio (\ref{fig:GAIN}. ábra), valamint az impedancia (\ref{fig:IMP}.ábra) .
+A következő ábrákon a frekvencia függvényében látható az SWR (\ref{fig:SWR}. ábra), a nyereség, front-to-back és front-to-rear ratio (\ref{fig:GAIN}. ábra), valamint az impedancia (\ref{fig:IMP}.ábra) .
 
 A \ref{fig:irany}. ábrán látható az iránykarakterisztika.
 
@@ -363,6 +363,14 @@ A nyereség és a VSWR kiváló lett, az előre-hátra viszonyon és a főnyalá
 \clearpage
 
 \section{Összefoglalás}
+
+A projekt során egy 58~MHz-es Yagi-Uda antenna tervezését és szimulációját végeztem el a 4nec2 szoftver segítségével. A tervezési folyamat során egy gyári specifikáció (Kathrein) adataiból indultam ki. 
+
+Először kutatómunkát végeztem, olvastam az "Antenna Theory Analysis and Design 3rd edition" c. könyv releváns szekcióit és egyéb online  elérhető forrásokat a Yagi-Uda antenna tervezéséről. Utánanéztem a feltalálásának a történelmének is. 
+
+Mikor úgy éreztem, hogy megfelelően utánajártam, elkészítettem 4nec2-ben egy kezdeti geometriát, majd ezt a beépített lehetőségek segítségével optimalizáltam.
+
+Összességében elégedett vagyok az eredményekkel, az előre-hátra viszonytól eltekintve, ami egy 8 elemes Yagi antennához képest jelentősen elmarad a várt értéktől.
 
 
 \newpage
