@@ -77,11 +77,11 @@
 
 A Yagi-Uda antennát Shintaro Uda és Hidetsuru Yagi találta fel az 1920-as években. Uda Yagi asszisztense volt, eredetileg eredményeiket japánul dokumentálta, így a világ többi részén csak akkor lett ismert, amikor Yagi  leírta azokat angolul is. Annak ellenére, hogy kreditálta Uda munkáját, az antennára leggyakrabban csak Yagi antennaként hivatkoznak.
 
-Ez egy antenna rendszer, amelyben egy dipólantennát vesznek körül parazita elemekkel, hogy jobb irányítottságot érjenek el.
+Ez egy antennarendszer, amelyben egy dipólantennát vesznek körül parazita elemekkel, hogy jobb irányítottságot érjenek el.
 
 Az elmúlt évtizedekben ez lett a legelterjedtebb antenna TV vételére VHF és UHF sávokon.
 
-Én a feladatomhoz kaptam a Tanár Úrtól egy dokumentumot, amelyben különböző Yagi antenna dimenziók vannak megadva VHF sávon, ebből fogok kiindulni, egy 58MHz-s antennát fogok tervezni a K 52 16 8 27-es oszlop alapján.
+A feladatomhoz kaptam  egy dokumentumot, amelyben különböző Yagi antenna dimenziók vannak megadva VHF sávon, ebből fogok kiindulni, egy 58 MHz-es antennát fogok tervezni a K 52 16 8 27-es oszlop alapján.
 
 \begin{figure}[ht]
     \centering
@@ -96,7 +96,7 @@ Az elmúlt évtizedekben ez lett a legelterjedtebb antenna TV vételére VHF és
 
 \section{Elméleti ismeretek összefoglalása}
 
-Egy Yagi antenna 3 részből áll: egy reflektorból (ritkán alkalmaznak többet, mivel jelentősen nem javítja a reflektivitást, jelen esetben pont 3 lesz), egy táplált félhullámú dipólból (a továbbiakban DE, mint driven element-ként fogok rá hivatkozni) és egy vagy több direktorból.
+Egy Yagi antenna 3 részből áll: egy reflektorból (ritkán alkalmaznak többet, mivel jelentősen nem javítja az irányítottságot az elemszám növelése, jelen esetben 3 elemből áll), egy táplált félhullámú dipólból (a továbbiakban DE, mint driven element-ként fogok rá hivatkozni) és egy vagy több direktorból.
 A felépítést a \ref{fig:yagi-konyv}. ábra mutatja. A DE leggyakrabban egy hajlított dipólus, én a szimulációban egyszerű vezetéket alkalmaztam.
 
 
@@ -113,7 +113,7 @@ A sugárzási irány a direktorok irányába mutat, és minél több direktort h
 
 Mivel a reflektor hosszabb mint a DE, ezért az impedanciája induktív lesz, a direktoroké (mivel ők pedig rövidebbek) kapacitív. Ez egy fázisprogresszióhoz fog vezetni az antenna mentén, amely hasonló lesz egy haladóhulláméhoz, a DE terét a direktorok irányába fogja erősíteni. 
 
-A Yagi antenna rendszerre tekinthetünk egy olyan struktúraként, amely egy haladóhullámot támogat, amelynek a teljesítménye az egyes elemek árameloszlásán és a fázissebességen múlik \cite{balanis}.
+A Yagi antennarendszerre tekinthetünk egy olyan struktúraként, amely egy haladóhullámot támogat, amelynek a teljesítménye az egyes elemek árameloszlásán és a fázissebességen múlik \cite{balanis}.
 
 \clearpage
 
@@ -122,7 +122,7 @@ A Yagi antenna rendszerre tekinthetünk egy olyan struktúraként, amely egy hal
 A tervezés során a célom, hogy eredményképpen egy olyan antennát kapjak, amely tükrözi a(z) \ref{fig:kathrein}. ábrát, tehát:
 
 \begin{itemize}
-    \item \textbf{VSWR:} $< 1,15$.
+    \item \textbf{VSWR:} $< 1.15$.
     \item \textbf{Gain:} Legalább 6 dBi.
     \item \textbf{Bemeneti impedancia:} 50 $\Omega$.
     \item \textbf{Iránykarakterisztika:} A \ref{fig:kathrein}. ábrához hasonló.
@@ -146,7 +146,7 @@ A szimulációt szabadtérben végeztem, a vezető anyagának rezet adtam meg, a
 
 Parazitikus elemek jelenlétében a DE optimális hossza nem pontosan 0.5$\lambda$, hanem valahol 0.45-0.49$\lambda$ között van \cite{balanis}.
 
-Bár az "Antenna Theory Analysis and Design" könyv azt írja, hogy tipikusan a direktorok közt 0.3-0.4$\lambda$ hely van, ez jelen esetben nem megvalósítható, mivel a reflektor és az utolsó direktor közti távolság adott, és túl nagy lenne a lépésköz. Más forrásokban azt találtam, hogy 0.25-0.005$\lambda$ közti távolságokat gyakran alkalmaznak \cite{yagi-video}.
+Bár az "Antenna Theory Analysis and Design" könyv azt írja, hogy tipikusan a direktorok közt 0.3-0.4$\lambda$ hely van, ez jelen esetben nem megvalósítható, mivel a reflektor és az utolsó direktor közti távolság adott, és túl nagy lenne a lépésköz. Más forrásokban azt találtam, hogy 0.25-0.05$\lambda$ közti távolságokat gyakran alkalmaznak \cite{yagi-video}.
 
 Az optimális tervhez a direktorok közti távolság nem konstans. Kiindulásképpen beállítottam ezeket a távolságokat megfelelő kompromisszumnak tűnő értékekre.
 
@@ -181,7 +181,7 @@ Az eredeti és az optimalizált értékeket a \ref{tab:yagi_parameters}. táblá
 
 \FloatBarrier
 
-Optimalizálás előtt a VSWR 4.45dB volt, utána 1.14, tehát jelentősen javult a geometriának az enyhe módosításával, anélkül, hogy a nyereséget negatívan befolyásolta volna. Az is látszik, hogy a DE és a direktorok hossza nem változott (illetve csak olyan csekély mértékben, hogy $\lambda$-ban kifejezve elhanyagolható).
+Optimalizálás előtt a VSWR 4.45 volt, utána 1.14, tehát jelentősen javult a geometriának az enyhe módosításával, anélkül, hogy a nyereséget negatívan befolyásolta volna. Az is látszik, hogy a DE és a direktorok hossza nem változott (illetve csak olyan csekély mértékben, hogy $\lambda$-ban kifejezve elhanyagolható).
 
 \begin{figure}[ht]
      \centering
@@ -358,7 +358,7 @@ A kitűzött és az elért értékeket a következő táblázat mutatja.
     \label{tab:eredmeny}
 \end{table}
 
-A nyereség és a VSWR kiváló lett, az előre-hátra viszonyon és a főnyalábszélességen még lehetne javítani (már ha az a cél, hogy H síkban $\ang{128}$ legyen).
+A nyereség és a VSWR kiváló lett, a főnyalábszélességekkel is elégedett vagyok (hacsak nem kifejezetten cél, hogy H síkban nagyobb legyen), az előre-hátra viszony nem éri el a várt értéket.
 
 \clearpage
 
@@ -366,7 +366,7 @@ A nyereség és a VSWR kiváló lett, az előre-hátra viszonyon és a főnyalá
 
 A projekt során egy 58~MHz-es Yagi-Uda antenna tervezését és szimulációját végeztem el a 4nec2 szoftver segítségével. A tervezési folyamat során egy gyári specifikáció (Kathrein) adataiból indultam ki. 
 
-Először kutatómunkát végeztem, olvastam az "Antenna Theory Analysis and Design 3rd edition" c. könyv releváns szekcióit és egyéb online  elérhető forrásokat a Yagi-Uda antenna tervezéséről. Utánanéztem a feltalálásának a történelmének is. 
+Először irodalomkutatást végeztem, olvastam az "Antenna Theory Analysis and Design 3rd edition" c. könyv releváns szekcióit és egyéb online  elérhető forrásokat a Yagi-Uda antenna tervezéséről. Utánanéztem a feltalálásának a történelmének is. 
 
 Mikor úgy éreztem, hogy megfelelően utánajártam, elkészítettem 4nec2-ben egy kezdeti geometriát, majd ezt a beépített lehetőségek segítségével optimalizáltam.
 

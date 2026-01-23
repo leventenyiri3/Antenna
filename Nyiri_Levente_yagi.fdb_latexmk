@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber Nyiri_Levente_yagi"] 1769155312.72753 "Nyiri_Levente_yagi.bcf" "Nyiri_Levente_yagi.bbl" "Nyiri_Levente_yagi" 1769156533.11301 0
-  "Nyiri_Levente_yagi.bcf" 1769156533.0372 108361 ec54e9b65ffa2ec36ae90c461c18e081 "pdflatex"
+["biber Nyiri_Levente_yagi"] 1769155312.72753 "Nyiri_Levente_yagi.bcf" "Nyiri_Levente_yagi.bbl" "Nyiri_Levente_yagi" 1769160154.37565 0
+  "Nyiri_Levente_yagi.bcf" 1769160154.29746 108361 ec54e9b65ffa2ec36ae90c461c18e081 "pdflatex"
   "forrasok.bib" 1769086778.84182 925 4d9925ed2d45e78a919a8c1c738b515e ""
   (generated)
   "Nyiri_Levente_yagi.bbl"
   "Nyiri_Levente_yagi.blg"
   (rewritten before read)
-["pdflatex"] 1769156531.22816 "Nyiri_Levente_yagi.tex" "Nyiri_Levente_yagi.pdf" "Nyiri_Levente_yagi" 1769156533.11328 0
+["pdflatex"] 1769160152.47032 "Nyiri_Levente_yagi.tex" "Nyiri_Levente_yagi.pdf" "Nyiri_Levente_yagi" 1769160154.37592 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -132,16 +132,16 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1754037930 5526361 5adee4aa342457daf971a29efd2119d0 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1754038062 3605723 c1007134c0de2c8854b3f827b4d39407 ""
   "/usr/local/texlive/2025/texmf.cnf" 1754037927.02921 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "Nyiri_Levente_yagi.aux" 1769156533.03634 6181 be82e83770d5b086dc851f21fe8601e0 "pdflatex"
+  "Nyiri_Levente_yagi.aux" 1769160154.29565 6181 be82e83770d5b086dc851f21fe8601e0 "pdflatex"
   "Nyiri_Levente_yagi.bbl" 1769155313.47022 4635 82b0911cb45f4674cbd8f95b136b7344 "biber Nyiri_Levente_yagi"
-  "Nyiri_Levente_yagi.run.xml" 1769156533.03844 2565 0b3790d87f250ffbea4c5651011eeb73 "pdflatex"
-  "Nyiri_Levente_yagi.tex" 1769156529.31619 15566 95703e4d93433ba0b4512b39fac06fa5 ""
-  "Nyiri_Levente_yagi.toc" 1769156533.03844 375 394b7420c4b533c74a046313b7f3880c "pdflatex"
+  "Nyiri_Levente_yagi.run.xml" 1769160154.29884 2565 0b3790d87f250ffbea4c5651011eeb73 "pdflatex"
+  "Nyiri_Levente_yagi.tex" 1769160150.79564 15611 04de4461bf599c58161087d3083a03f5 ""
+  "Nyiri_Levente_yagi.toc" 1769160154.29884 375 394b7420c4b533c74a046313b7f3880c "pdflatex"
   "Pictures/3D-58.png" 1769075182 17383 6e5f20c8acdd486a0cc90205bb9a0496 ""
   "Pictures/BME.png" 1758801323.68494 7797 0e7bb921739505c79b2c9ea67a498e9c ""
   "Pictures/H-E-58-pre-opt.png" 1769080208 78844 51823ba25c8a8f4083cb6bafbf56bb84 ""
   "Pictures/H-E-58.png" 1769075322 79162 5a3283a6d4b9c940ffbd653f0375b41c ""
-  "Pictures/SWR-58-pre-opt.png" 1769077305 21415 25a8af39f9e73b094fc13b69a8ffdcf8 ""
+  "Pictures/SWR-58-pre-opt.png" 1769158842.82702 20992 50d237a7b24b0440b3c407e6f460f711 ""
   "Pictures/SWR-58.png" 1769076865 21180 e6de662daac0311f82f3a5f5fe006e09 ""
   "Pictures/Yagi-konyv.png" 1768998542 15888 fbba4b4e27dca332603c02547f972d48 ""
   "Pictures/color-58-1-pre-opt.png" 1769080320 149964 5a01f32b95b68e9b93761198c0082cee ""
@@ -154,7 +154,7 @@
   "Pictures/imp-58.png" 1769076965 29715 23b60ef415095fee5216a7ef31a52e3e ""
   "Pictures/kathrein.jpg" 1769084962.70281 689411 07125dbcfbee134170f8ed9acf825dc5 ""
   "Pictures/main-58-pre-opt.png" 1769080596 5886 9bd6e35319df4a1df868120bca0c53ac ""
-  "Pictures/main-58.png" 1769074929 5597 cbe3fa5f82872b8f98462fbef99d8b36 ""
+  "Pictures/main-58.png" 1769158835.5826 5870 256f2153e05efbca3367dad423c1a99e ""
   (generated)
   "Nyiri_Levente_yagi.aux"
   "Nyiri_Levente_yagi.bcf"
